@@ -30,4 +30,4 @@ Check out the live demo of the portfolio [here](https://dyvak8rtbn5om.cloudfront
 - CSS3
 - JavaScript
 - Bootstrap 5
-- jQuery (optional)
+- jQuery
