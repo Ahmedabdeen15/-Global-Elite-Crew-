@@ -23,3 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
         navElement.style.borderRadius = '0px 0px 80px 80px';
     });
 });
+
+var map = L.map('map').setView([31.211273, 29.945373], 15);
+googleStreets = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
+    maxZoom: 20,
+    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+}).addTo(map);
+var marker = L.marker([31.211273, 29.945373]).addTo(map);
+var language = window.location.href.endsWith('-ar.html') ? 'ar' : 'en';
+var popupContent = language === 'ar' ? "مقرنا الرئيسي<br/>ميناء دمياط ، الغرفه الادارية بجوار مبنى غرفة الملاحة": "Our Main Office<br/>49 Street 5 Somuha,<br/> Alexandria- Egypt";
+
+marker.bindPopup(popupContent).openPopup();
+

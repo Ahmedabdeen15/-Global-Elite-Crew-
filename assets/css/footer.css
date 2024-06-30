@@ -30,7 +30,6 @@ footer p {
     color: #FFFFFF;
     font-weight: 300;
 }
-
 footer .cr{
     font-weight: 400;
     font-size: 14px;
@@ -39,4 +38,23 @@ footer .cr{
 footer .cr i{
     font-size: 30px;
     margin-bottom: 5px;
+}
+#map { 
+    height: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+@media (max-width: 992px){
+    #map { 
+        height: 250px;
+        margin-right: 250px;
+        margin-left: 250px;
+    }
+}
+@media (max-width: 425px){
+    #map { 
+        height: 250px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
