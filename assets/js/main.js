@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 navElement.style.height = '95px'; // Reset to default height
                 navElement.style.borderRadius = '0px 0px 160px 160px'; // Reset border-radius
             } else {
-                navCover.style.height = '45vh'; // Expand to full viewport height
-                navElement.style.height = '45vh'; // Expand to full viewport height
+                navCover.style.height = '95vh'; // Expand to full viewport height
+                navElement.style.height = '95vh'; // Expand to full viewport height
                 navElement.style.borderRadius = '0px 0px 90px 90px'; // Remove border-radius for full height
             }
         });
