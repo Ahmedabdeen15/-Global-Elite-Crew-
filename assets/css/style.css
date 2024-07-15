@@ -344,7 +344,7 @@ section.about .border {
 
     section.about .border {
         box-shadow: 0 4px 4px 4px rgba(115, 115, 115, 0.7);
-        min-height: 40vh;
+        min-height: 500px;
     }
     section.about p,.list-about{
         margin-top: 4rem !important;
@@ -354,7 +354,7 @@ section.about .border {
         margin: 5px 0;
     }
 }
-@media (max-width: 425.98px) {
+@media (max-width: 443.98px) {
     .two-column-list li {
         flex: 0 0 100%;
       }
@@ -362,7 +362,7 @@ section.about .border {
         margin-top: 6rem !important;
     }
     section.about .border {
-    min-height: 60vh;
+    min-height: 640px;
     }
 }
 @media (max-width: 375.98px) {
@@ -371,7 +371,7 @@ section.about .border {
         margin-top: 7rem !important;
     }
     section.about .border {
-    min-height: 65vh;
+        min-height: 700px;
     }
 }
 /*---------------about-end-------------------*/
