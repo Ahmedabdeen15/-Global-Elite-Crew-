@@ -178,7 +178,7 @@ nav .navbar-toggler {
 /*---------------index--------------------*/
 /*---------------main-area--------------------*/
 .displayMobile {
-    display: none;
+    display: none !important;
 }
 
 section.main {
@@ -275,9 +275,8 @@ section.whoWeAre .content {
 /*---------------about--------------------*/
 section.about {
     color: #515151;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 32px;
+    font-weight: 650;
+    font-size: 1.3rem;
 }
 
 section.about .grid {
@@ -300,15 +299,32 @@ section.about .grid .thirdRow {
     grid-column: 2 / 3;
 }
 
-section.about .grid .thirdRow p {
-    margin-top: 15%;
-    margin-bottom: 20%;
+.two-column-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.two-column-list li {
+    flex: 0 0 50%;
+    margin: 5px 0;
+}
 
 section.about .border {
     box-shadow: 0 4px 4px 0 rgba(115, 115, 115, 0.5);
+    padding: 20px;
 }
+.about-slider img {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 1024px) {
+    .two-column-list li {
+      flex: 0 0 100%;
+    }
+}
+
 @media (max-width: 992px) {
     section.about .grid {
         grid-template-columns: 1fr;
@@ -321,17 +337,43 @@ section.about .border {
         grid-column: 1 / 2;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 768.98px) {
     section.about .firstRow {
         margin-inline: 0;
     }
 
     section.about .border {
         box-shadow: 0 4px 4px 4px rgba(115, 115, 115, 0.7);
-        height: 380px;
+        min-height: 40vh;
+    }
+    section.about p,.list-about{
+        margin-top: 4rem !important;
+    }
+    .two-column-list li {
+        flex: 0 0 50%;
+        margin: 5px 0;
     }
 }
+@media (max-width: 425.98px) {
+    .two-column-list li {
+        flex: 0 0 100%;
+      }
+      section.about p.vision,.list-about{
+        margin-top: 6rem !important;
+    }
+    section.about .border {
+    min-height: 60vh;
+    }
+}
+@media (max-width: 375.98px) {
 
+    section.about p.vision,.list-about{
+        margin-top: 7rem !important;
+    }
+    section.about .border {
+    min-height: 65vh;
+    }
+}
 /*---------------about-end-------------------*/
 
 section.offer .displayMobile {
@@ -416,7 +458,7 @@ section.Certificates button {
 
 @media (max-width: 768px) {
     .displayMobile {
-        display: block;
+        display: block !important;
     }
 
     .displayDesktop {

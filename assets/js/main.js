@@ -53,8 +53,26 @@ $(document).ready(function(){
             }
         }
     });
+    
   });
-
+  $(document).ready(function(){
+    $('.about-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        nav: false,
+        dots: true,
+        smartSpeed: 1000,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+        }
+    });
+  });
 
 /**---------------map-----------------*/
 var map = L.map('map').setView([31.211273, 29.945373], 15);
