@@ -356,7 +356,7 @@ section.about .border {
 }
 @media (max-width: 443.98px) {
     .two-column-list li {
-        flex: 0 0 100%;
+        flex: 0 0 50%;
       }
       section.about p.vision,.list-about{
         margin-top: 6rem !important;
@@ -375,7 +375,7 @@ section.about .border {
     }
 }
 /*---------------about-end-------------------*/
-
+/*---------------What we can offer---------*/
 section.offer .displayMobile {
     display: none;
 }
@@ -390,43 +390,16 @@ section.offer .head {
 
 section.offer .listHead,
 section.offer .li {
+    display: block;
     font-size: 26px;
     line-height: 37px;
     font-weight: 500;
     color: black;
 }
-
-section.logos p {
-    font-family: "a Atmospheric", sans-serif;
-    color: #3AB2FE;
-    font-size: 40px;
-    font-weight: 400;
-    text-align: center;
+.Certificates-offer{
+    font-size: 20px;
+    font-weight: 450;
 }
-
-section.Certificates {
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 31.69px;
-}
-
-section.Certificates .head {
-    color: #3AB2FE;
-    font-size: 40px;
-    line-height: 44.26px;
-    font-family: "a Atmospheric", sans-serif;
-}
-
-section.Certificates button {
-    background-color: #FFAE00;
-    font-size: 27px;
-    font-weight: 700;
-    border: none;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-
 @media (max-width: 992px) {
     section.offer img {
         min-width: 100%;
@@ -440,22 +413,7 @@ section.Certificates button {
     section.offer .displayMobile {
         display: block;
     }
-
-    section.logos img {
-        min-width: 100%;
-    }
-
-    section.Certificates {
-        font-size: 1.5rem;
-        text-align: center;
-        list-style-position: inside;
-    }
-
-    section.Certificates .head {
-        font-size: 2.5rem;
-    }
 }
-
 @media (max-width: 768px) {
     .displayMobile {
         display: block !important;
@@ -479,23 +437,96 @@ section.Certificates button {
         font-size: 24px;
         text-align: center;
     }
-
+}
+@media (max-width:440px){
     section.offer .listHead,
     section.offer .li {
-        font-size: 16px;
-    }
-
-    section.logos p {
-        font-size: 24px;
-        text-align: start;
-    }
-
-    section.logos .displayDesktop {
         display: none;
     }
+    .Certificates-offer{
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+/*---------------What we can offer-end--------*/
+/*---------------We worked with---------*/
+section.logos p {
+    font-family: "a Atmospheric", sans-serif;
+    color: #3AB2FE;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+.past-projects-slider .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
 
+.logo-img {
+    width: 300px !important;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    section.logos p {
+        font-size: 24px;
+    }
+}
+@media (max-width: 440px){
+    .logo-img {
+        width: 250px !important;
+    }
+    .past-projects-slider .item {
+        height: 150px;
+    }
+}
+/*---------------We worked with-end----------*/
+/*---------------certificates-----------*/
+section.Certificates {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+section.Certificates .head {
+    color: #3AB2FE;
+    font-size: 40px;
+    line-height: 44.26px;
+    font-family: "a Atmospheric", sans-serif;
+}
+
+section.Certificates button {
+    background-color: #FFAE00;
+    font-size: 27px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+@media (max-width: 1024px) {
+    .certificates-list.two-column-list li {
+        flex: 0 0 50%;
+    }
+
+}
+@media (max-width: 992px) {
+    section.Certificates.listHead {
+        font-size: 21px;
+        text-align: center;
+        list-style-position: inside;
+    }
+    section.Certificates .head {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
     section.Certificates {
-        font-size: 16px;
+        font-size: 19px;
         text-align: center;
         list-style-position: inside;
     }
@@ -507,18 +538,14 @@ section.Certificates button {
     section.Certificates .head {
         font-size: 24px;
     }
-
+    .certificates-list.two-column-list li {
+        flex: 0 0 100%;
+        list-style-type: none;
+    }
 }
+/*---------------certificates-end----------*/
 
-.past-projects-slider img {
-    display: inline;
-    width: auto !important;
-}
 
-.past-projects-slider {
-    transition: transform 0.3s ease;
-    min-height: 300px;
-}
 .container{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -595,3 +622,4 @@ footer .cr i {
 div.row {
     --bs-gutter-x: 0;
 }
+
