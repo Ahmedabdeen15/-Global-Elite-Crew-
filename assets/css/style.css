@@ -121,17 +121,13 @@ nav .dropdown-menu {
     background-color: #3AB2FE !important;
     border: none !important;
 }
-
-@media (max-width: 1439px) {
-    .more-content {
-        display: none;
-    }
-
-    .dropdown {
-        display: block;
-    }
+.more-content {
+    display: none;
 }
 
+.dropdown {
+    display: block;
+}
 @media (min-width: 1440px) {
     .dropdown {
         display: none;
