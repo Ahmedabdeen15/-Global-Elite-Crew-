@@ -1,6 +1,5 @@
 /**---------------nav-bar-----------------*/
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.innerWidth < 768) {
         var navbarToggler = document.querySelector('.navbar-toggler');
         var navbarCollapse = document.querySelector('#navbarSupportedContent');
         var navCover = document.querySelector('.nav-cover');
@@ -12,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navElement.style.height = '95px'; // Reset to default height
                 navElement.style.borderRadius = '0px 0px 160px 160px'; // Reset border-radius
             } else {
-                navCover.style.height = '453px'; // Expand to full viewport height
+                navCover.style.height = '460px'; // Expand to full viewport height
                 navElement.style.height = '450px'; // Expand to full viewport height
                 navElement.style.borderRadius = '0px 0px 90px 90px'; // Remove border-radius for full height
             }
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navElement.style.height = '95px';
             navElement.style.borderRadius = '0px 0px 80px 80px';
         });
-    }
 });
 /**---------------slider-----------------*/
 $(document).ready(function(){
@@ -43,17 +41,34 @@ $(document).ready(function(){
                 items: 1
             },
             576: {
-                items: 2
+                items: 1
             },
             768: {
-                items: 3
+                items: 2
             },
             992: {
-                items: 4
+                items: 3
             }
         }
     });
-    
+    $(".past-projects-slider").owlCarousel({
+        items: 4,  // Number of items to display
+        margin: 10, // Margin between items
+        loop: true, // Enable loop
+        autoplay: true, // Enable autoplay
+        autoplayTimeout: 3000, // Autoplay interval
+        responsive: {
+          0: {
+            items: 1 // Items to display on small screens
+          },
+          600: {
+            items: 2 // Items to display on medium screens
+          },
+          1000: {
+            items: 4 // Items to display on large screens
+          }
+        }
+      });
   });
   $(document).ready(function(){
     $('.about-slider').owlCarousel({
