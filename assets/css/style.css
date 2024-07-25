@@ -398,7 +398,7 @@ section.about .border {
 }
 @media (max-width: 443.98px) {
     .two-column-list li {
-        flex: 0 0 50%;
+        flex: 0 0 100%;
       }
       section.about p.vision,.list-about{
         margin-top: 6rem !important;
