@@ -88,6 +88,34 @@ $(document).ready(function(){
         }
     });
   });
+/**---------------counter-----------------*/
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  counter.innerText = "0";
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText.replace(/[+%]/g, ''); // Remove any existing + or % symbols
+    const increment = target / 3000; // Adjust the increment value for slower counting
+
+    if (count < target) {
+      if (target === 99) {
+        counter.innerText = `${Math.ceil(count + increment)}%`;
+      } else {
+        counter.innerText = `${Math.ceil(count + increment)}+`;
+      }
+      setTimeout(updateCounter, 10); // Adjust the timeout duration for slower counting
+    } else {
+      if (target === 99) {
+        counter.innerText = `${target}%`;
+      } else {
+        counter.innerText = `${target}+`;
+      }
+    }
+  };
+  updateCounter();
+});
+
 
 /**---------------map-----------------*/
 var map = L.map('map').setView([31.211273, 29.945373], 15);

@@ -267,6 +267,53 @@ section.whoWeAre .content {
     }
 }
 /*---------------who-we-are-end-------------------*/
+/*---------------NUMBERS-AREA-------------------*/
+.cd__main {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    min-height: 550px;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    text-shadow: 1px 1px 0 #FFAE00;
+  }
+  
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+  }
+  
+  .counter {
+    font-size: 80px;
+    margin-top: 10px;
+  }
+  
+  @media only screen and (min-width: 1360px) {
+    .cd__main {
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 24px;
+    }
+  }
+  @media (max-width: 580px) {
+    .cd__main {
+      flex-direction: column;
+    }
+    .counter {
+        font-size: 60px;
+      }
+  }
+  
+  
+/*---------------NUMBERS-AREA-end------------------*/
 /*---------------about--------------------*/
 section.about {
     color: #515151;
