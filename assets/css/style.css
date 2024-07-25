@@ -511,6 +511,14 @@ section.logos p {
     height: auto;
     max-height: 100%;
     object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+.logo-img:hover {
+    filter: grayscale(0%);
+}
+.long-item img{
+    width: auto !important;
 }
 @media (max-width: 768px) {
     section.logos p {
