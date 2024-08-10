@@ -23,7 +23,7 @@
     <div class="nav-cover fixed-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/index.html"><img src="assets\images\logo.png" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="assets\images\logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -32,16 +32,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link  text-dark" href="/index.html">Home</a>
+                            <a class="nav-link  text-dark" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/about.html">About Us</a>
+                            <a class="nav-link text-dark" href="/about">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Services.html">Services</a>
+                            <a class="nav-link text-dark" href="/Services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Contact.html">Contact Us</a>
+                            <a class="nav-link text-dark" href="/Contact">Contact Us</a>
                         </li>
 
                         <button class="nav-item dropdown">
@@ -58,7 +58,8 @@
                                 <li>
                                     <hr>
                                 </li>
-                                <li><a class="text-decoration-none text-white" href="/Certificates.html">Certificates</a></li>
+                                <li><a class="text-decoration-none text-white"
+                                        href="/Certificates.html">Certificates</a></li>
                             </ul>
                         </button>
                         <li class="nav-item more-content">
@@ -73,7 +74,8 @@
                     </ul>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="/index-ar.html">العربية <i class="fa-solid fa-globe"></i></a>
+                            <a class="nav-link text-dark" href="/index-ar.html">العربية <i
+                                    class="fa-solid fa-globe"></i></a>
                         </li>
                     </ul>
 
@@ -94,7 +96,7 @@
 
         <section class="about container mt-5">
             <p class="header text-center">About us</p>
-            <div class="col displayMobile"><img src="assets\images\secandry_banner.png" alt=""></div>
+            <div class="col d-block d-lg-none"><img src="assets\images\secandry_banner.png" alt=""></div>
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <p class="contentHead">Who We Are</p>
@@ -103,19 +105,13 @@
                         over 16 years in serving as TQM consultant and a long list of satisfied customers. We will be
                         happy to provide additional references upon request.</p>
                 </div>
-                <div class="col-lg-6 displayDisktop"><img src="assets\images\secandry_banner.png" alt=""></div>
+                <div class="col-lg-6 d-none d-lg-block"><img src="assets\images\secandry_banner.png" alt=""></div>
             </div>
         </section>
-<!-- buggg -->
         <section class="description container mt-5">
-            <div class="row displayMobile">
-                <div class="col-4 displayMobile"><img src="assets\images\image 5.png" alt=""></div>
-                <div class="col-4 displayMobile"><img src="assets\images\image 4.png" alt=""></div>
-                <div class="col-4 displayMobile"><img src="assets\images\image 6.png" alt=""></div>
-            </div>
             <div class="row">
-                <div class="col-lg-6 displayDisktop">
-                    <img src="assets\images\Group 13.png" alt="">
+                <div class="col-lg-6 d-flex align-items-center d-none d-lg-block">
+                    <img src="assets\images\swot.png" alt="SWOT Image" class="img-fluid">
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <p class="contentHead">Consulting Description</p>
@@ -123,12 +119,25 @@
                     <p>To become certified, an organization has to develop a QMS. A QMS consists of policies and
                         procedures that provide a formal framework describing the way an organization conducts its core
                         business and meets the requirements of the standard.</p>
+                </div>
+                <div class="col-lg-6 d-block d-lg-none">
+                    <img src="assets\images\swot.png" alt="SWOT Image">
+                </div>
+                <div class="col-lg-6 align-self-center">
                     <p class="mt-5">ISO 9001 provides the framework for a quality management system that helps
                         businesses identify risks and opportunities, while taking action to address these risks and
                         opportunities that are proportionate to their potential impact on products and services. This
                         risk-based thinking approach assists organizations in improving customer satisfaction and
                         becoming more efficient, while adapting and responding to changes and contingencies impacting
                         their business operations</p>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center">
+                    <img src="assets\images\QC.jpg" alt="Quality Management System Image" class="img-fluid">
+                </div>
+                <div class="col-lg-6 d-flex align-items-center d-none d-lg-block">
+                    <img src="assets/images/risk.png" alt="Risk Image" class="img-fluid">
+                </div>
+                <div class="col-lg-6 align-self-center">
                     <p class="mt-5">So The TQM assessment is performed by:</p>
                     <ol>
                         <li>Executive and Management Overview / Planning</li>
@@ -140,12 +149,14 @@
                         <li>Sustain and Continual Improvement</li>
                     </ol>
                 </div>
+                <div class="col-lg-6 d-block d-lg-none">
+                    <img src="assets/images/risk.png" alt="Risk Image">
+                </div>
             </div>
         </section>
-
+        
         <section class="advantages container mt-5">
             <div class="row">
-                <div class="col displayMobile"><img src="assets\images\20943461 [Converted] 1.png" alt=""></div>
                 <div class="col-lg-7">
                     <p class="contentHead">our competitive advantages</p>
                     <ul>
@@ -156,35 +167,36 @@
                         <li>Sustainable consultancy Services.</li>
                     </ul>
                 </div>
-                <div class="col-lg-5 displayDisktop">
-                    <img src="assets\images\20943461 [Converted] 1.png" alt="">
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="assets\images\20943461.png" alt="">
                 </div>
             </div>
         </section>
-
+        <!-- buggg -->
+        
         <section class="quality container mt-5">
             <div class="row">
-                <div class="col-lg-5 align-self-center">
-                    <img src="assets\images\5878307 1.png" alt="">
+                <div class="col-lg-5 d-flex align-items-center">
+                    <img src="assets/images/strategic-management-consulting-service.webp" alt="Consulting team working on strategic management" class="rotate-90 img-fluid">
                 </div>
                 <div class="col-lg-7">
                     <p class="contentHead text-center">QUALITY STRATEGY AND QUALITY CONSULTING SERVICES</p>
                     <p>A sound quality management system in compliance with the (inter)national requirements will
                         provide your organization a structured method for your processes and aid in obtaining your
-                        certifications.Thinking about expanding your business on a global scale, incorporation of an
+                        certifications. Thinking about expanding your business on a global scale, incorporation of an
                         extended quality system including a wider range of compliance above just the local requirement
                         might seem an additional burden at first but will result in an experienced workforce already
                         working at a higher compliance level and as such are prepared for future challenges. Our T.Q.M
-                        assessment is the first-step towards implementing a real quality management changes to your
+                        assessment is the first step towards implementing real quality management changes to your
                         staff, processes, and department as a whole.</p>
                 </div>
             </div>
         </section>
+        
 
         <section class="culture container mt-5">
             <div class="row">
-                <div class="col displayMobile"><img src="assets\images\image 2.png" alt=""></div>
-                <div class="col-lg-7">
+                <div class="col-lg-12">
                     <p class="header">Quality Culture</p>
                     <p>At Global Elite Crew, We follow one simple principle of respecting our own words and do as we
                         said, building our relationship with customers based on trust and reliability</p>
@@ -204,14 +216,14 @@
                         <li>Definite organizational character</li>
                     </ul>
                 </div>
-                <div class="col-lg-5 align-self-center displayDisktop">
-                    <img src="assets\images\image 2.png" alt="">
+                <div class="col-lg-12 align-self-center displayDisktop">
+                    <img src="assets\images\quality-culture.png" alt="">
                 </div>
             </div>
         </section>
 
 
-       
+
 
     </body>
     <!---------------BODY-END------------------->
@@ -219,7 +231,7 @@
     <footer>
         <div class="row sticky-bottom">
             <div class="col-lg-4 mt-4 text-center">
-                <a href=""><img src="assets/assets\images\logo.png" alt="G.E.C" class="mb-3"></a>
+                <a href=""><img src="assets\images\logo.png" alt="G.E.C" class="mb-3"></a>
                 <h4 class="slogan-1">Global Elite Crew</h4>
                 <h4 class="slogan-2">For consultation</h4>
             </div>
@@ -234,7 +246,7 @@
                             <P>Tel: +2 01143711439</P>
                         </li>
                         <li>
-                            <p>Mail: <a href="" class="text-decoration-none">ghadaesmat74@gmail.com</a></p>
+                            <p>Mail: ghada_esmat@globalelitecrew.com</p>
                         </li>
                     </ul>
                 </div>

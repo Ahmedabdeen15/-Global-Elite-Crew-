@@ -602,6 +602,9 @@ section.Certificates button {
 }
 /*--------------index-end--------------------*/
 /*---------------About----------------------*/
+section.banner{
+    padding-top: 70px;
+}
 section.banner img{
     width: 100%;
     max-height: 100vh;
@@ -615,20 +618,26 @@ section.about .header{
     color: #3AB2FE;
     text-shadow: 0 4px 4px rgba(58, 178, 254, 0.5);
 }
-p.contentHead{
+p.contentHead {
     font-family: "a Atmospheric", sans-serif;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 1.6rem;
     line-height: 44px;
     color: #3AB2FE;
 }
 
 
-p,li{
+p,
+li {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.4rem;
     line-height: 44px;
     color: #000000;
+}
+section.description img{
+    width: 100%;
+    max-height: 100vh;
+
 }
 
 section.description li{
@@ -654,9 +663,24 @@ section.culture .head{
     line-height: 31.69px;
     color: #3AB2FE;
 }
-
-
+@media (max-width: 1439px){
+    .rotate-90 {
+        transform: rotate(90deg);
+        transform-origin: center;
+        margin-right: 15px; 
+        max-width: 100%;
+        height: auto; 
+    }
+}
 @media (max-width: 992px){
+    .rotate-90 {
+        transform: rotate(0deg);
+        transform-origin: center;
+        margin-right: 15px; 
+        max-width: 100%;
+        height: auto; 
+        padding-bottom: 50px;
+    }
     .displayDisktop{
         display: none;
     }
@@ -664,7 +688,7 @@ section.culture .head{
         display: block;
     }
     img{
-        width: 100%;
+        width: 100% ;
         max-height: 100vh;
     }
 }
