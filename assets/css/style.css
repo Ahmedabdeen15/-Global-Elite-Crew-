@@ -388,9 +388,6 @@ section.about .border {
         box-shadow: 0 4px 4px 4px rgba(115, 115, 115, 0.7);
         min-height: 500px;
     }
-    section.about p,.list-about{
-        margin-top: 4rem !important;
-    }
     .two-column-list li {
         flex: 0 0 50%;
         margin: 5px 0;
@@ -538,6 +535,7 @@ section.logos p {
 section.Certificates {
     font-size: 26px;
     font-weight: 500;
+    padding-bottom: 1.5rem;
 }
 
 section.Certificates .head {
@@ -595,11 +593,6 @@ section.Certificates button {
 }
 /*---------------certificates-end----------*/
 
-
-.container{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
 /*--------------index-end--------------------*/
 /*---------------About----------------------*/
 section.banner{
@@ -680,6 +673,11 @@ section.culture .head{
         max-width: 100%;
         height: auto; 
         padding-bottom: 50px;
+    }
+    section.culture .header,section.culture p, section.culture li,p,
+    li,p.contentHead{
+        font-size: 1.1rem;
+        align-self: center;
     }
     .displayDisktop{
         display: none;
