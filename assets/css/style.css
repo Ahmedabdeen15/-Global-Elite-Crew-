@@ -691,6 +691,17 @@ section.culture .head{
     }
 }
 /*---------------About-end---------------------*/
+/*---------------services---------------------*/
+section.services .header{
+    font-family: "a Atmospheric", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 44px;
+    color: #3AB2FE;
+    text-shadow: 0 4px 4px rgba(58, 178, 254, 0.5);
+    padding-bottom: 20px;
+}
+/*---------------services-end---------------------*/
 
 /*---------------Footer--------------------*/
 footer {
