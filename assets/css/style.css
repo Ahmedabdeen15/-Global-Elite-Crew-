@@ -754,7 +754,17 @@ section.contact i.main{
     font-size: 40px;
 }
 section.contact{
+    padding-top: 100px;
     padding-bottom: 50px;
+}
+section.contact .header{
+    font-family: "a Atmospheric", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 44px;
+    color: #3AB2FE;
+    text-shadow: 0 4px 4px rgba(58, 178, 254, 0.5);
+    padding-bottom: 20px;
 }
 section.contact a.mab{
     font-size: 30px;
