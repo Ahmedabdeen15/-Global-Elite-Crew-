@@ -115,6 +115,12 @@ counters.forEach((counter) => {
   };
   updateCounter();
 });
+/**---------------phone-no-----------------*/
+const phoneInputField = document.querySelector("#phone-number");
+const phoneInput = window.intlTelInput(phoneInputField, {
+    initialCountry: "eg", // Set the initial country, e.g., Egypt
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // For formatting the number
+});
 
 
 /**---------------map-----------------*/
