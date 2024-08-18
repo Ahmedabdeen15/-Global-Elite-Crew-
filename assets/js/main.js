@@ -128,37 +128,41 @@ const content_Form = document.getElementById('contact-form');
 const content_message = document.getElementById('contact-message');
 
 const sendEmail = (e) => {
-    e.preventDefault();
-    onSubmit();
+  e.preventDefault();
+  onSubmit();
 }
 
+
+
+
+
 function onSubmit() {
-    var first_name = document.forms["contact-form"]["first_name"].value;
-    var last_name = document.forms["contact-form"]["last_name"].value;
-    var email = document.forms["contact-form"]["email"].value;
-    var phone_number = document.forms["contact-form"]["phone_number"].value;
-    var address = document.forms["contact-form"]["address"].value;
-    var message = document.forms["contact-form"]["message"].value;
+  var first_name = document.forms["contact-form"]["first_name"].value;
+  var last_name = document.forms["contact-form"]["last_name"].value;
+  var email = document.forms["contact-form"]["email"].value;
+  var phone_number = document.forms["contact-form"]["phone_number"].value;
+  var address = document.forms["contact-form"]["address"].value;
+  var message = document.forms["contact-form"]["message"].value;
 
-    var validRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!validRegex.test(email) || first_name.includes("http://") || email.includes("http://") || first_name.length <= 2 || message.length < 10) {
-        content_message.textContent = "Potential spam detected. Please enter valid data.";
-        setTimeout(() => {
-            content_message.textContent = '';
-        }, 5000);
-        return;
-    }
+  var validRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!validRegex.test(email) || first_name.includes("http://") || email.includes("http://") || first_name.length <= 2 || message.length < 10) {
+    content_message.textContent = "Potential spam detected. Please enter valid data.";
+    setTimeout(() => {
+      content_message.textContent = '';
+    }, 5000);
+    return;
+  }
 
-    emailjs.sendForm('service_5ouy7vo', 'template_6i35tfc', '#contact-form', '5LOaCugdX_NzN06Xi')
-        .then(function () {
-            content_message.textContent = 'Message sent successfully ✔';
-            setTimeout(() => {
-                content_message.textContent = '';
-            }, 5000);
-            content_Form.reset();
-        }, function (error) {
-            content_message.textContent = 'Message sending failed ❌';
-        });
+  emailjs.sendForm('service_5ouy7vo', 'template_6i35tfc', '#contact-form', '5LOaCugdX_NzN06Xi')
+    .then(function () {
+      content_message.textContent = 'Message sent successfully ✔';
+      setTimeout(() => {
+        content_message.textContent = '';
+      }, 5000);
+      content_Form.reset();
+    }, function (error) {
+      content_message.textContent = 'Message sending failed ❌';
+    });
 }
 
 if (content_Form) {
