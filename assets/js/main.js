@@ -149,7 +149,7 @@ function onSubmit() {
         return;
     }
 
-    emailjs.sendForm('service_f84gpb7', 'template_rj83rbs', '#contact-form', '5LOaCugdX_NzN06Xi')
+    emailjs.sendForm('service_5ouy7vo', 'template_6i35tfc', '#contact-form', '5LOaCugdX_NzN06Xi')
         .then(function () {
             content_message.textContent = 'Message sent successfully ✔';
             setTimeout(() => {
