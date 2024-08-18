@@ -123,19 +123,14 @@ if (phoneInputField) {
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // For formatting the number
   });
 }
-/**---------------js-mail-----------------*/
-const content_Form = document.getElementById('contact-form'),
-    content_message = document.getElementById('contact-message')
+// JavaScript
+const content_Form = document.getElementById('contact-form');
+const content_message = document.getElementById('contact-message');
 
-
-
-
-    
 const sendEmail = (e) => {
     e.preventDefault();
+    onSubmit();
 }
-
-
 
 function onSubmit() {
     var first_name = document.forms["contact-form"]["first_name"].value;
@@ -149,9 +144,8 @@ function onSubmit() {
     if (!validRegex.test(email) || first_name.includes("http://") || email.includes("http://") || first_name.length <= 2 || message.length < 10) {
         content_message.textContent = "Potential spam detected. Please enter valid data.";
         setTimeout(() => {
-            content_message.textContent = ''
+            content_message.textContent = '';
         }, 5000);
-        content_Form.reset();
         return;
     }
 
@@ -159,13 +153,14 @@ function onSubmit() {
         .then(function () {
             content_message.textContent = 'Message sent successfully ✔';
             setTimeout(() => {
-                content_message.textContent = ''
+                content_message.textContent = '';
             }, 5000);
             content_Form.reset();
         }, function (error) {
             content_message.textContent = 'Message sending failed ❌';
         });
 }
+
 if (content_Form) {
   content_Form.addEventListener('submit', sendEmail);
 }
