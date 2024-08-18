@@ -168,6 +168,7 @@ if (content_Form) {
   content_Form.addEventListener('submit', sendEmail);
 }
 
+
 /**---------------map-----------------*/
 var map = L.map('map').setView([31.211273, 29.945373], 15);
 googleStreets = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
