@@ -129,6 +129,7 @@ if (phoneInputField) {
 
 
 function sendEmail() {
+  e.preventDefault()
   // Retrieve form values
   var first_name = document.forms["contact-form"]["first_name"].value;
   var last_name = document.forms["contact-form"]["last_name"].value;
