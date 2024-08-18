@@ -117,10 +117,12 @@ counters.forEach((counter) => {
 });
 /**---------------phone-no-----------------*/
 const phoneInputField = document.querySelector("#phone-number");
-const phoneInput = window.intlTelInput(phoneInputField, {
-  initialCountry: "eg", // Set the initial country, e.g., Egypt
-  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // For formatting the number
-});
+if (phoneInputField) {
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    initialCountry: "eg", // Set the initial country, e.g., Egypt
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // For formatting the number
+  });
+}
 /**---------------js-mail-----------------*/
 const content_Form = document.getElementById('contact-form'),
     content_message = document.getElementById('contact-message')
@@ -162,9 +164,9 @@ function onSubmit(token) {
             content_message.textContent = 'Message sending failed ❌';
         });
 }
-
-content_Form.addEventListener('submit', sendEmail);
-
+if (content_Form) {
+  content_Form.addEventListener('submit', sendEmail);
+}
 
 /**---------------map-----------------*/
 var map = L.map('map').setView([31.211273, 29.945373], 15);
