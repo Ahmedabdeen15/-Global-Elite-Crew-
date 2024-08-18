@@ -124,10 +124,8 @@ if (phoneInputField) {
   });
 }
 /**---------------js-mail-----------------*/
-  const content_Form = document.getElementById('contact-form'),
+const content_Form = document.getElementById('contact-form'),
   content_message = document.getElementById('contact-message')
-
-
 function sendEmail() {
   e.preventDefault()
   // Retrieve form values
@@ -137,10 +135,8 @@ function sendEmail() {
   var phone_number = document.forms["contact-form"]["phone_number"].value;
   var address = document.forms["contact-form"]["address"].value;
   var message = document.forms["contact-form"]["message"].value;
-
   var validRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Basic spam checking (you can enhance this according to your needs)
   if (!validRegex.test(email) || first_name.includes("http://") || email.includes("http://") || first_name.length <= 2 || message.length < 10) {
     content_message.textContent = "Potential spam detected. Please enter valid data.";
     setTimeout(() => {
@@ -149,7 +145,6 @@ function sendEmail() {
     content_Form.reset();
     return;
   }
-
   emailjs.sendForm('service_f84gpb7', 'template_rj83rbs', '#contact-form', '5LOaCugdX_NzN06Xi')
     .then(function () {
       content_message.textContent = 'Message sent successfully ✔';
@@ -164,6 +159,8 @@ function sendEmail() {
 if (content_Form) {
   content_Form.addEventListener('submit', sendEmail);
 }
+
+
 
 
 /**---------------map-----------------*/
