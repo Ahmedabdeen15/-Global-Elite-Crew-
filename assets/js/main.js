@@ -127,12 +127,17 @@ if (phoneInputField) {
 const content_Form = document.getElementById('contact-form'),
     content_message = document.getElementById('contact-message')
 
+
+
+
+    
 const sendEmail = (e) => {
     e.preventDefault();
 }
 
+
+
 function onSubmit() {
-    // Retrieve form values
     var first_name = document.forms["contact-form"]["first_name"].value;
     var last_name = document.forms["contact-form"]["last_name"].value;
     var email = document.forms["contact-form"]["email"].value;
@@ -141,8 +146,6 @@ function onSubmit() {
     var message = document.forms["contact-form"]["message"].value;
 
     var validRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Basic spam checking (you can enhance this according to your needs)
     if (!validRegex.test(email) || first_name.includes("http://") || email.includes("http://") || first_name.length <= 2 || message.length < 10) {
         content_message.textContent = "Potential spam detected. Please enter valid data.";
         setTimeout(() => {
@@ -166,6 +169,12 @@ function onSubmit() {
 if (content_Form) {
   content_Form.addEventListener('submit', sendEmail);
 }
+
+
+
+
+
+
 
 
 /**---------------map-----------------*/
