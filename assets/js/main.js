@@ -126,16 +126,10 @@ if (phoneInputField) {
 // JavaScript
 const content_Form = document.getElementById('contact-form');
 const content_message = document.getElementById('contact-message');
-
 const sendEmail = (e) => {
   e.preventDefault();
   onSubmit();
 }
-
-
-
-
-
 function onSubmit() {
   var first_name = document.forms["contact-form"]["first_name"].value;
   var last_name = document.forms["contact-form"]["last_name"].value;
@@ -152,7 +146,6 @@ function onSubmit() {
     }, 5000);
     return;
   }
-
   emailjs.sendForm('service_5ouy7vo', 'template_6i35tfc', '#contact-form', '5LOaCugdX_NzN06Xi')
     .then(function () {
       content_message.textContent = 'Message sent successfully ✔';
@@ -164,7 +157,6 @@ function onSubmit() {
       content_message.textContent = 'Message sending failed ❌';
     });
 }
-
 if (content_Form) {
   content_Form.addEventListener('submit', sendEmail);
 }
