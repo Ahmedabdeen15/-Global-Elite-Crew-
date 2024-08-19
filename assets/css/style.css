@@ -320,19 +320,16 @@ section.about {
     font-weight: 650;
     font-size: 1.3rem;
 }
-
 section.about .grid {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     gap: 35px;
 }
-
 section.about .grid .firstRow {
     grid-column: 1 / 3;
     margin-inline: 0;
 }
-
 section.about .grid .secRow {
     grid-column: 1 / 2;
 }
