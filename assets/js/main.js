@@ -164,7 +164,10 @@ if (content_Form) {
 
 
 
-
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PQM1RXE71K');
 
 
 
