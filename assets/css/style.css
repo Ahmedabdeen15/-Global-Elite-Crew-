@@ -24,6 +24,10 @@ body {
     text-align:right;
     font-weight: 500;
     font-family: "Geeza Pro", "Nadeem", "Al Bayan";
+    ul {
+        direction: rtl;
+        text-align: right;
+      }
 }
 /*---------------NAV--------------------*/
 .nav-cover {
