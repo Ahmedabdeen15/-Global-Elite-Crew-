@@ -1,0 +1,19 @@
+# Block all crawlers from accessing specific directories
+User-agent: *
+Disallow: /assets/
+
+
+# Allow all crawlers to access the rest of the site
+User-agent: *
+Allow: /
+
+# Block a specific file from being indexed
+User-agent: *
+Disallow: /under-construction
+
+# Allow Googlebot full access
+User-agent: Googlebot
+Allow: /
+
+# Sitemap location
+Sitemap: https://globalelitecrew.com/sitemap.xml
