@@ -298,9 +298,15 @@ section.whoWeAre .content {
     text-align: center;
     margin: 30px 50px;
   }
+  .counter-container span{
+    font-size: 50px;
+    font-weight: 600;
+
+  }
   
   .counter {
-    font-size: 80px;
+    font-size: 120px;
+    font-weight: 700;
     margin-top: 10px;
   }
   
@@ -310,6 +316,19 @@ section.whoWeAre .content {
       margin-left: auto;
       margin-right: auto;
       padding: 24px;
+    }
+  }
+  @media (max-width: 1360px) {
+    .counter-container span{
+        font-size: 40px;
+        font-weight: 600;
+    
+      }
+      
+    .counter {
+    font-size: 75px;
+    font-weight: 700;
+    margin-top: 10px;
     }
   }
   @media (max-width: 580px) {
@@ -407,7 +426,7 @@ section.about .border {
         margin-top: 6rem !important;
     }
     section.about .border {
-    min-height: 640px;
+    min-height: 680px;
     }
 }
 @media (max-width: 375.98px) {
@@ -633,7 +652,6 @@ li {
 section.description img{
     width: 100%;
     max-height: 100vh;
-
 }
 
 section.description li{
@@ -691,6 +709,9 @@ section.culture .head{
     img[src*="quality-culture.png"],img[src*="secandry_banner.png"] {
         width: 100% ;
         max-height: 100vh;
+    }
+    section.description img{
+        width: 70%;
     }
 }
 /*---------------About-end---------------------*/
