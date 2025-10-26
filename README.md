@@ -4,18 +4,23 @@ Welcome to the Global-Elite-Crew Portfolio repository. This project showcases th
 
 ## Table of Contents
 
-- [Demo](#demo)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Global-Elite-Crew Portfolio](#global-elite-crew-portfolio)
+  - [Table of Contents](#table-of-contents)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Technologies](#technologies)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
 ## Demo
 
-Check out the live demo of the portfolio [here](https://dyvak8rtbn5om.cloudfront.net/wp-content/uploads/2022/01/website-under-construction-1.jpg).
+Visit our live portfolio website: [https://globalelitecrew.com/](https://globalelitecrew.com/)
+
+Explore our comprehensive quality management consulting services, certifications, and client success stories.
+
 ## Features
 
 - **Responsive Design**: The portfolio is fully responsive, ensuring a seamless experience across all devices.
@@ -31,3 +36,28 @@ Check out the live demo of the portfolio [here](https://dyvak8rtbn5om.cloudfront
 - JavaScript
 - Bootstrap 5
 - jQuery
+
+## Installation
+
+This is a static website that can be deployed to any web hosting service. Simply upload all files to your web server's public directory.
+
+## Usage
+
+The website showcases Global-Elite-Crew's professional services and capabilities. It includes:
+- Company overview and mission
+- Service offerings
+- Team information
+- Contact details
+- Client testimonials and case studies
+
+## Contributing
+
+This is a professional portfolio website for Global-Elite-Crew. For business inquiries or collaboration opportunities, please contact us directly.
+
+## License
+
+This is a proprietary website for Global-Elite-Crew. All rights reserved.
+
+## Contact
+
+For any inquiries or questions about this portfolio, please contact us through the contact form on the website or reach out to us directly.
