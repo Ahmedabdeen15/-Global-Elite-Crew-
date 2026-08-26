@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens extracted from the legacy stylesheet (old-code/assets/css/style.css).
+ * Tailwind v4 CSS-first configuration: these @theme entries power every
+ * bg-/text-/border- utility class used across the app.
+ *
+ * Brand blue ......... #3AB2FE (legacy nav / headings)
+ * Accent amber ....... #FFAE00 (legacy slogans / footer border)
+ * Charcoal ink ....... #232B32 (legacy footer background)
+ */
+@theme {
+  --color-brand-50: #eff9ff;
+  --color-brand-100: #dbf0fe;
+  --color-brand-200: #bfe5fe;
+  --color-brand-300: #93d6fd;
+  --color-brand-400: #60c3fb;
+  --color-brand-500: #3ab2fe;
+  --color-brand-600: #1e97ef;
+  --color-brand-700: #0d7ad8;
+  --color-brand-800: #1264ae;
+  --color-brand-900: #14538a;
+  --color-brand-950: #123453;
+
+  --color-accent-50: #fff9eb;
+  --color-accent-100: #fef1c7;
+  --color-accent-200: #fee18a;
+  --color-accent-300: #ffcb47;
+  --color-accent-400: #ffb61e;
+  --color-accent-500: #ffae00;
+  --color-accent-600: #f08c00;
+  --color-accent-700: #c76a02;
+  --color-accent-800: #9e5208;
+  --color-accent-900: #80430a;
+  --color-accent-950: #462102;
+
+  --color-ink-50: #f6f7f8;
+  --color-ink-100: #eceef0;
+  --color-ink-200: #d5dade;
+  --color-ink-300: #b0b9c1;
+  --color-ink-400: #85929e;
+  --color-ink-500: #667584;
+  --color-ink-600: #505e6c;
+  --color-ink-700: #414c57;
+  --color-ink-800: #39414a;
+  --color-ink-900: #232b32;
+  --color-ink-950: #181d23;
+
+  /* Signature curved-bottom pill from the legacy navbar */
+  --radius-nav-pill: 0 0 10rem 10rem;
+
+  /* Fonts are injected by next/font (see src/app/[locale]/layout.tsx) */
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-outfit), var(--font-montserrat), ui-sans-serif,
+    system-ui, sans-serif;
+}
+
+/* Arabic typography: Cairo with legacy Geeza Pro fallbacks */
+html[dir="rtl"] body {
+  font-family: var(--font-cairo), "Geeza Pro", "Nadeem", "Al Bayan",
+    ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--color-brand-500);
+  color: #ffffff;
+}
