@@ -1,19 +1,12 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+import { globalIgnores } from "eslint/config";
+import coreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-  {
-    ignores: ["old-code/**", ".next/**", "out/**", "node_modules/**"],
-  },
+  ...coreWebVitals,
+  ...nextTypescript,
+  // Archived legacy static site + build output stay out of lint scope.
+  globalIgnores(["old-code/**", ".next/**", "out/**", "node_modules/**"]),
 ];
 
 export default eslintConfig;

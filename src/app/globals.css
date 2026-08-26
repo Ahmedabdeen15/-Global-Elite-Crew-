@@ -91,6 +91,32 @@ body {
   margin: 0;
 }
 
+/*
+ * Client-logo marquee (replaces jQuery Owl Carousel from the legacy site).
+ */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 38s linear infinite;
+}
+
+[dir="rtl"] .marquee-track {
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 ::selection {
   background-color: var(--color-brand-500);
   color: #ffffff;

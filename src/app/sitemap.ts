@@ -5,7 +5,7 @@ import {
 } from "@/i18n/config";
 
 import type { MetadataRoute } from "next";
-import { absoluteUrl, site } from "@/lib/site";
+import { absoluteUrl } from "@/lib/site";
 import { buildAlternates } from "@/lib/seo";
 
 type PageKey = "home" | "about" | "services" | "contactUs";

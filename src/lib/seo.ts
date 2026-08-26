@@ -7,7 +7,7 @@ import {
   type Locale,
 } from "@/i18n/config";
 import type { SeoPageMeta } from "@/i18n/types";
-import { absoluteUrl, site } from "./site";
+import { absoluteUrl } from "./site";
 
 export type PageKey = "home" | "about" | "services" | "contactUs";
 

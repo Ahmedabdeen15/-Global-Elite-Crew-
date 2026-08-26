@@ -30,6 +30,11 @@ export function localizedPath(locale: Locale, path: string = sitePaths.home): st
   return `/${locale}${trimmed === "" ? "" : path}`;
 }
 
+/** The complementary locale of a two-locale site. */
+export function otherLocale(locale: Locale): Locale {
+  return locale === "en" ? "ar" : "en";
+}
+
 /** Sibling page URL used by the locale switcher and hreflang alternates. */
 export function switchLocale(
   current: Locale,
