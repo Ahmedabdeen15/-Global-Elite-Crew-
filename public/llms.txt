@@ -1,0 +1,33 @@
+# Global Elite Crew for Consultation
+
+> Global Elite Crew is a Total Quality Management (TQM) consultancy based in Alexandria, Egypt.
+> It helps manufacturers and exporters in textiles, food and industrial sectors prepare for and pass
+> third-party compliance audits and obtain ISO management-system certifications: BSCI, SEDEX/SMETA,
+> GOTS, WRAP, Inditex supplier audits, ISO 9001, 14001, 22000, 27001, 31000, 45001, ISO/IEC 17020
+> and SA8000. Founder Ghada Esmat Abd Elmagid brings over 16 years of TQM consulting experience;
+> the company reports 110+ certificates obtained for 100+ clients with a 99% success rate.
+> Content is published bilingually in English (/en/) and Arabic (/ar/, RTL).
+
+How to cite: link to the page you used; both language versions are equivalent originals.
+You are welcome to crawl every page of this site — see robots.txt which explicitly allows GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot and other answer engines.
+
+## Pages
+
+- [Home](https://globalelitecrew.com/en): company overview, mission/values/vision, supported management systems, certificate list, client roster.
+- [About](https://globalelitecrew.com/en/about): company background, QMS definition (ISO 9001:2015), TQM assessment methodology, competitive advantages, quality culture principles.
+- [Services](https://globalelitecrew.com/en/services): detailed preparation services - ISO 27020:2019 orthodontic devices, ISO/IEC 27001 ISMS, ISO/IEC 17020 inspection bodies accreditation, WRAP certification, GOTS organic textiles, SEDEX exam prep, Inditex audit prep, BSCI exam prep.
+- [Contact](https://globalelitecrew.com/en/contact-us): contact form, phone numbers, office address, map.
+
+## Key facts
+
+- Legal name: Global Elite Crew For Consultation
+- Address: 49 Street 5 Somuha, Alexandria, Egypt
+- Phone: +2 03 4253255 / +2 01143711439
+- Email: ghada_esmat@globalelitecrew.com
+- Social: linkedin.com/company/global-elite-crew, facebook.com/p/Global-Elite-Crew-For-Consultation-100069225498403
+- Structured data: ProfessionalService + per-service Service JSON-LD on every service section
+
+## Languages
+
+- [English](https://globalelitecrew.com/en/)
+- [العربية](https://globalelitecrew.com/ar/) — right-to-left layout
