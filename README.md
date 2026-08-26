@@ -1,63 +1,67 @@
-# Global-Elite-Crew Portfolio
+# Global Elite Crew — Marketing & Landing Site
 
-Welcome to the Global-Elite-Crew Portfolio repository. This project showcases the capabilities and services of Global-Elite-Crew through a well-designed and responsive website built using Bootstrap.
+Production site for **Global Elite Crew For Consultation**, a Total Quality Management (TQM) and ISO/certification-preparation consultancy based in Alexandria, Egypt → [globalelitecrew.com](https://globalelitecrew.com)
 
-## Table of Contents
+Refactored from a static HTML/Bootstrap/jQuery site into **Next.js 16 (App Router) + TypeScript strict + Tailwind CSS v4**, deployed on **Vercel**. The original codebase is archived untouched under [`old-code/`](./old-code) for reference.
 
-- [Global-Elite-Crew Portfolio](#global-elite-crew-portfolio)
-  - [Table of Contents](#table-of-contents)
-  - [Demo](#demo)
-  - [Features](#features)
-  - [Technologies](#technologies)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+## Core product: SEO & Answer Engine Optimization
 
-## Demo
+This is a landing page at heart — search visibility is a first-class feature:
 
-Visit our live portfolio website: [https://globalelitecrew.com/](https://globalelitecrew.com/)
+| Surface | Implementation |
+|---|---|
+| Metadata | Per-page unique EN/AR titles & descriptions via `buildMetadata()` (`src/lib/seo.ts`) |
+| Canonical | Every page pins `https://globalelitecrew.com/<locale>/<path>` |
+| Hreflang | `en`, `ar` and `x-default` alternates on every page **and** inside `sitemap.xml` |
+| Robots | `src/app/robots.ts` — allows all, explicitly welcomes GPTBot / OAI-SearchBot / ClaudeBot / PerplexityBot / Google-Extended |
+| Sitemap | Auto-generated at `src/app/sitemap.ts` with per-URL hreflang alternates |
+| Structured data | `ProfessionalService` graph (NAP, geo, founder, socials), per-service `Service` nodes, `BreadcrumbList` (`src/lib/schema.tsx`) |
+| OG images | Dynamic branded 1200×630 cards per locale via `next/og` |
+| AEO | [`public/llms.txt`](./public/llms.txt) — machine-readable company summary for LLM grounding |
 
-Explore our comprehensive quality management consulting services, certifications, and client success stories.
+## Bilingual architecture
 
-## Features
+- Routes live under `src/app/[locale]/` — `/en/*` (LTR, Montserrat/Outfit) and `/ar/*` (RTL, Cairo).
+- **All user-facing copy** lives in typed dictionaries under `src/i18n/`; `src/i18n/types.ts` validates both locales against one contract at compile time.
+- `src/proxy.ts` negotiates `Accept-Language` at `/` and bridges legacy flat URLs.
+- Permanent redirects in `next.config.ts`: `/about → /en/about`, `/about-arabic → /ar/about`, etc.
 
-- **Responsive Design**: The portfolio is fully responsive, ensuring a seamless experience across all devices.
-- **Bootstrap Framework**: Utilizes Bootstrap for a modern and consistent design.
-- **Interactive Elements**: Includes interactive components such as carousels, modals, and accordions.
-- **Dynamic Content**: Showcases dynamic content like project showcases and team member profiles.
-- **Contact Form**: Features a functional contact form for inquiries.
+## Getting started
 
-## Technologies
+```bash
+npm install
+npm run dev     # http://localhost:3000 -> redirects to /en or /ar
+npm run build   # type-checks dictionaries + generates all metadata routes
+npm run lint    # eslint flat config (next/core-web-vitals + next/typescript)
+```
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- jQuery
+Design tokens are defined CSS-first in `src/app/globals.css` (`@theme`): `--color-brand-*` (#3AB2FE family), `--color-accent-*` (#FFAE00 family), `--color-ink-*` (#232B32 family). Use token utilities only — no ad-hoc hex values.
 
-## Installation
+## Environment variables
 
-This is a static website that can be deployed to any web hosting service. Simply upload all files to your web server's public directory.
+Copy `.env.example` → `.env.local` (and configure the same keys in Vercel):
 
-## Usage
+| Variable | Required | Purpose |
+|---|---|---|
+| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | for the contact form | EmailJS service id |
+| `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` | for the contact form | EmailJS template id |
+| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | for the contact form | EmailJS public key |
+| `NEXT_PUBLIC_GA_ID` | optional | GA4 measurement id; omit to disable analytics |
 
-The website showcases Global-Elite-Crew's professional services and capabilities. It includes:
-- Company overview and mission
-- Service offerings
-- Team information
-- Contact details
-- Client testimonials and case studies
+The form ships with the legacy spam heuristics plus a honeypot field; it degrades gracefully when ids are missing.
 
-## Contributing
+## Repository map
 
-This is a professional portfolio website for Global-Elite-Crew. For business inquiries or collaboration opportunities, please contact us directly.
+See [`AGENTS.md`](./AGENTS.md) for the full map and conventions — including pointers to the Next.js documentation bundled at `node_modules/next/dist/docs/` which always matches the installed version.
 
-## License
+## Deploying
 
-This is a proprietary website for Global-Elite-Crew. All rights reserved.
+1. Remove GitHub Pages from this repo (Settings → Pages) — the CNAME flow is retired; the CNAME file only survives inside `old-code/`.
+2. Import the repository in Vercel; framework preset auto-detects Next.js.
+3. Add the environment variables above in Project Settings.
+4. Point `globalelitecrew.com` DNS at Vercel (apex A record + `www` CNAME) and add both domains to the project; apex is canonical.
 
-## Contact
+## Contact facts used across the site
 
-For any inquiries or questions about this portfolio, please contact us through the contact form on the website or reach out to us directly.
+Address: 49 Street 5 Somuha, Alexandria, Egypt · Tel: +2 03 4253255 / +2 01143711439 · ghada_esmat@globalelitecrew.com
+
