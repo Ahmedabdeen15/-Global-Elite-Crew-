@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Cairo, Montserrat, Outfit } from "next/font/google";
 import { notFound } from "next/navigation";
+import { isLocale, localeDirection } from "@/i18n/config";
 import "../globals.css";
-
-const LOCALES = ["en", "ar"] as const;
-type Locale = (typeof LOCALES)[number];
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,7 +32,10 @@ export const metadata: Metadata = {
 
 /** Pre-render both locales as fully static pages. */
 export function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
+  return [
+    { locale: "en" },
+    { locale: "ar" },
+  ];
 }
 
 export default async function LocaleLayout({
@@ -46,14 +47,12 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!LOCALES.includes(locale as Locale)) notFound();
-
-  const direction = locale === "ar" ? "rtl" : "ltr";
+  if (!isLocale(locale)) notFound();
 
   return (
     <html
       lang={locale}
-      dir={direction}
+      dir={localeDirection[locale]}
       className={`${montserrat.variable} ${outfit.variable} ${cairo.variable}`}
     >
       <body>{children}</body>
