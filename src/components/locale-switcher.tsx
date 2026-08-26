@@ -30,7 +30,7 @@ export function LocaleSwitcher({
     <Link
       href={localizedPath(target, path)}
       hrefLang={target}
-      lang={currentLocale === "en" ? "en" : "en"}
+      lang={target}
       aria-label={ariaLabel}
       title={label}
       className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-4 py-2 text-sm font-semibold text-ink-800 transition-colors hover:border-brand-400 hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"

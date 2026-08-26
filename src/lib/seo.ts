@@ -60,7 +60,7 @@ export function buildMetadata(
       images: [
         {
           // Dynamic generated card via src/app/[locale]/opengraph-image.tsx
-          url: absoluteUrl(`${localizedPath(locale)}opengraph-image`),
+          url: absoluteUrl(`${localizedPath(locale)}/opengraph-image`),
           width: 1200,
           height: 630,
           alt: dict.common.seo.openGraphAlt,
@@ -72,7 +72,7 @@ export function buildMetadata(
       site: "@GlobalEliteCrew",
       title: meta.title,
       description: meta.description,
-      images: [absoluteUrl(`${localizedPath(locale)}opengraph-image`)],
+      images: [absoluteUrl(`${localizedPath(locale)}/opengraph-image`)],
     },
     robots: {
       index: true,
