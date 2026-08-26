@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Cairo, Montserrat, Outfit } from "next/font/google";
 import { notFound } from "next/navigation";
 import { isLocale, localeDirection } from "@/i18n/config";
+import { site } from "@/lib/site";
 import "../globals.css";
 
 const montserrat = Montserrat({
@@ -24,9 +25,11 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Global Elite Crew",
-    template: "%s | Global Elite Crew",
+  // Required anchor for every canonical/OG URL built across locales.
+  metadataBase: new URL(site.url),
+  icons: {
+    icon: [{ url: "/images/logo.png", type: "image/png" }],
+    apple: "/apple-icon.png",
   },
 };
 
