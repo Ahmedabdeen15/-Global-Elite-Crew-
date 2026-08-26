@@ -82,7 +82,6 @@ export function SiteHeader({
 
         <div className="flex items-center gap-3">
           <LocaleSwitcher
-            currentLocale={locale}
             target={otherLocale(locale)}
             label={switcherLabel}
             ariaLabel={switcherAria}

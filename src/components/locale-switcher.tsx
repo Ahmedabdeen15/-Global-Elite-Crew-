@@ -3,7 +3,6 @@ import { FaGlobe } from "react-icons/fa6";
 import { localizedPath, sitePaths, type Locale } from "@/i18n/config";
 
 interface LocaleSwitcherProps {
-  currentLocale: Locale;
   target: Locale;
   /** Visible label of the target language ("العربية" / "English"). */
   label: string;
@@ -20,7 +19,6 @@ interface LocaleSwitcherProps {
  * anchor to the same page in the other locale.
  */
 export function LocaleSwitcher({
-  currentLocale,
   target,
   label,
   ariaLabel,
