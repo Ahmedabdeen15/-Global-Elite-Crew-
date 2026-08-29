@@ -64,7 +64,6 @@ html[dir="rtl"] body {
 html {
   box-sizing: border-box;
   font-size: 100%;
-  scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {

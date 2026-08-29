@@ -63,6 +63,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={localeDirection[locale]}
+      data-scroll-behavior="smooth"
       className={`${montserrat.variable} ${outfit.variable} ${cairo.variable}`}
     >
       <body className="flex min-h-screen flex-col bg-white text-ink-900 antialiased">

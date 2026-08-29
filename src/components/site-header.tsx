@@ -42,7 +42,7 @@ export function SiteHeader({
       : Boolean(pathname?.startsWith(localizedPath(locale, path)));
 
   return (
-    <div className="sticky top-0 z-50 bg-brand-500 shadow-lg shadow-brand-500/30 [border-radius:0_0_8rem_8rem] max-md:[border-radius:0_0_4rem_4rem]">
+    <div className="sticky top-0 z-50 bg-brand-500 shadow-lg shadow-brand-500/30 rounded-[0_0_8rem_8rem] max-md:rounded-[0_0_4rem_4rem]">
       <header className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 lg:px-20">
         <Link
           href={localizedPath(locale)}
@@ -55,7 +55,7 @@ export function SiteHeader({
             width={190}
             height={64}
             priority
-            className="h-auto w-36 md:w-[170px]"
+            className="h-auto w-36 md:w-42.5"
           />
         </Link>
 
