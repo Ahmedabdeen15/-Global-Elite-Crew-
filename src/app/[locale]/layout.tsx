@@ -64,6 +64,7 @@ export default async function LocaleLayout({
       lang={locale}
       dir={localeDirection[locale]}
       data-scroll-behavior="smooth"
+      suppressHydrationWarning
       className={`${montserrat.variable} ${outfit.variable} ${cairo.variable}`}
     >
       <body className="flex min-h-screen flex-col bg-white text-ink-900 antialiased">
