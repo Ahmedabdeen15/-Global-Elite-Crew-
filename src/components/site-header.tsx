@@ -36,6 +36,11 @@ export function SiteHeader({
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  const currentPath =
+    pathname && pathname.startsWith(`/${locale}`)
+      ? pathname.replace(new RegExp(`^/${locale}(?=/|$)`), "") || "/"
+      : sitePaths.home;
+
   const isActive = (path: string) =>
     path === sitePaths.home
       ? pathname === localizedPath(locale)
@@ -86,6 +91,7 @@ export function SiteHeader({
             target={otherLocale(locale)}
             label={switcherLabel}
             ariaLabel={switcherAria}
+            path={currentPath}
           />
           {/* Mobile toggle */}
           <button
