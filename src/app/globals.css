@@ -1,61 +1,71 @@
 @import "tailwindcss";
 
 /*
- * Design tokens extracted from the legacy stylesheet (old-code/assets/css/style.css).
- * Tailwind v4 CSS-first configuration: these @theme entries power every
- * bg-/text-/border- utility class used across the app.
+ * Global Elite Crew brand palette
  *
- * Brand blue ......... #3AB2FE (legacy nav / headings)
- * Accent amber ....... #FFAE00 (legacy slogans / footer border)
- * Charcoal ink ....... #232B32 (legacy footer background)
+ * Primary Navy ....... #061832
+ * Accent Gold ........ #B08A45
+ * Ink / Charcoal ..... #20242B
+ *
+ * Palette extracted/inspired from the Global Elite Crew logo.
  */
+
 @theme {
-  --color-brand-50: #eff9ff;
-  --color-brand-100: #dbf0fe;
-  --color-brand-200: #bfe5fe;
-  --color-brand-300: #93d6fd;
-  --color-brand-400: #60c3fb;
-  --color-brand-500: #3ab2fe;
-  --color-brand-600: #1e97ef;
-  --color-brand-700: #0d7ad8;
-  --color-brand-800: #1264ae;
-  --color-brand-900: #14538a;
-  --color-brand-950: #123453;
+  /* =========================================================
+   * BRAND — Deep Navy
+   * ========================================================= */
+  --color-brand-50: #f2f5f9;
+  --color-brand-100: #e4eaf1;
+  --color-brand-200: #c5d0df;
+  --color-brand-300: #9eafc4;
+  --color-brand-400: #7187a2;
+  --color-brand-500: #4a6381;
+  --color-brand-600: #304b6b;
+  --color-brand-700: #1c3655;
+  --color-brand-800: #102947;
+  --color-brand-900: #081d38;
+  --color-brand-950: #041225;
 
-  --color-accent-50: #fff9eb;
-  --color-accent-100: #fef1c7;
-  --color-accent-200: #fee18a;
-  --color-accent-300: #ffcb47;
-  --color-accent-400: #ffb61e;
-  --color-accent-500: #ffae00;
-  --color-accent-600: #f08c00;
-  --color-accent-700: #c76a02;
-  --color-accent-800: #9e5208;
-  --color-accent-900: #80430a;
-  --color-accent-950: #462102;
+  /* =========================================================
+   * ACCENT — Luxury Gold
+   * ========================================================= */
+  --color-accent-50: #fcfaf5;
+  --color-accent-100: #f5eedf;
+  --color-accent-200: #eadcbd;
+  --color-accent-300: #dbc492;
+  --color-accent-400: #c9a968;
+  --color-accent-500: #b08a45;
+  --color-accent-600: #987335;
+  --color-accent-700: #795a2d;
+  --color-accent-800: #604724;
+  --color-accent-900: #49361e;
+  --color-accent-950: #2a1f12;
 
-  --color-ink-50: #f6f7f8;
-  --color-ink-100: #eceef0;
-  --color-ink-200: #d5dade;
-  --color-ink-300: #b0b9c1;
-  --color-ink-400: #85929e;
-  --color-ink-500: #667584;
-  --color-ink-600: #505e6c;
-  --color-ink-700: #414c57;
-  --color-ink-800: #39414a;
-  --color-ink-900: #232b32;
-  --color-ink-950: #181d23;
+  /* =========================================================
+   * INK — Neutral / Charcoal
+   * ========================================================= */
+  --color-ink-50: #f8f8f7;
+  --color-ink-100: #f0f0ef;
+  --color-ink-200: #dededc;
+  --color-ink-300: #c3c3c0;
+  --color-ink-400: #999997;
+  --color-ink-500: #737371;
+  --color-ink-600: #595957;
+  --color-ink-700: #41413f;
+  --color-ink-800: #30302f;
+  --color-ink-900: #20201f;
+  --color-ink-950: #111111;
 
   /* Signature curved-bottom pill from the legacy navbar */
   --radius-nav-pill: 0 0 10rem 10rem;
 
-  /* Fonts are injected by next/font (see src/app/[locale]/layout.tsx) */
+  /* Fonts are injected by next/font */
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-outfit), var(--font-montserrat), ui-sans-serif,
     system-ui, sans-serif;
 }
 
-/* Arabic typography: Cairo with legacy Geeza Pro fallbacks */
+/* Arabic typography */
 html[dir="rtl"] body {
   font-family: var(--font-cairo), "Geeza Pro", "Nadeem", "Al Bayan",
     ui-sans-serif, system-ui, sans-serif;
@@ -71,9 +81,7 @@ html {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
+  * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -91,12 +99,13 @@ body {
 }
 
 /*
- * Client-logo marquee (replaces jQuery Owl Carousel from the legacy site).
+ * Client-logo marquee
  */
 @keyframes marquee-scroll {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -116,7 +125,10 @@ body {
   }
 }
 
+/*
+ * Selection
+ */
 ::selection {
-  background-color: var(--color-brand-500);
+  background-color: var(--color-accent-500);
   color: #ffffff;
 }

@@ -26,7 +26,7 @@ export function SiteFooter({ locale, copy, relatedLinks }: SiteFooterProps) {
         <div className="text-center">
           <Link href={localizedPath(locale)} className="inline-block">
             <Image
-              src="/images/logo.png"
+              src="/images/mini-logo.png"
               alt={`${copy.brandLine1} ${copy.brandLine2}`}
               width={120}
               height={120}

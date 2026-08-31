@@ -42,7 +42,7 @@ export default async function ContactPage({
           </div>
 
           {/* Info panel column */}
-          <aside className="flex flex-col gap-8 rounded-3xl bg-gradient-to-b from-brand-50 to-brand-100/60 p-6 sm:p-10">
+          <aside className="flex flex-col gap-8 rounded-3xl bg-linear-to-b from-brand-50 to-brand-100/60 p-6 sm:p-10">
             <div className="text-center">
               <Image
                 src="/images/logo.png"

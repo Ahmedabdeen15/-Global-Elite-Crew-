@@ -47,7 +47,7 @@ export default async function HomePage({
   return (
     <>
       {/* ── Hero ───────────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-brand-50 to-white">
+      <section className="bg-linear-to-b from-brand-50 to-white">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 pb-24 pt-20 text-center md:pb-32 md:pt-28">
           <p className="font-display text-5xl font-black tracking-tight text-accent-500 drop-shadow-sm sm:text-7xl">
             {t.hero.brandLine1}
@@ -130,16 +130,13 @@ export default async function HomePage({
                 loading="lazy"
                 className="mb-6 h-auto w-44 object-contain"
               />
-              <h3 className="mb-4 font-display text-2xl font-bold text-brand-700">
-                {pillar.title}
-              </h3>
               {"body" in pillar && pillar.body ? (
-                <p className="text-start leading-relaxed text-ink-600">
+                <p className="text-start leading-relaxed text-ink-600 my-auto">
                   {pillar.body}
                 </p>
               ) : null}
               {"items" in pillar && pillar.items ? (
-                <ul className="w-full space-y-2 text-start text-ink-600">
+                <ul className="w-full space-y-2 text-start text-ink-600 my-auto">
                   {pillar.items.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <FaCircleCheck aria-hidden className="mt-1 shrink-0 text-brand-400" />

@@ -42,7 +42,8 @@ export function SiteHeader({
       : Boolean(pathname?.startsWith(localizedPath(locale, path)));
 
   return (
-    <div className="sticky top-0 z-50 bg-brand-500 shadow-lg shadow-brand-500/30 rounded-[0_0_8rem_8rem] max-md:rounded-[0_0_4rem_4rem]">
+    <div className="sticky top-0 z-50 bg-brand-500 shadow-lg shadow-brand-500/30 rounded-[0_0_8rem_8rem] max-md:rounded-[0_0_4rem_4rem]" dir="ltr">
+      <div className="mx-auto bg-white w-[99%] rounded-[0_0_8rem_8rem]">
       <header className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 lg:px-20">
         <Link
           href={localizedPath(locale)}
@@ -55,7 +56,7 @@ export function SiteHeader({
             width={190}
             height={64}
             priority
-            className="h-auto w-36 md:w-42.5"
+            className="mx-10 h-auto w-20 md:w-42.5"
           />
         </Link>
 
@@ -69,8 +70,8 @@ export function SiteHeader({
                   aria-current={isActive(link.href) ? "page" : undefined}
                   className={`rounded-full px-5 py-2 text-base font-semibold transition-colors ${
                     isActive(link.href)
-                      ? "bg-white text-brand-700 shadow"
-                      : "text-ink-800 hover:bg-white/60"
+                      ? "bg-brand-500 text-white shadow"
+                      : "text-ink-800 hover:bg-brand-100/60"
                   }`}
                 >
                   {link.label}
@@ -120,8 +121,8 @@ export function SiteHeader({
                   aria-current={isActive(link.href) ? "page" : undefined}
                   className={`block rounded-xl px-4 py-3 text-center text-lg font-semibold ${
                     isActive(link.href)
-                      ? "bg-white text-brand-700"
-                      : "text-ink-800 hover:bg-white/60"
+                      ? "bg-brand-500 text-white"
+                      : "text-ink-800 hover:bg-brand-100/60"
                   }`}
                 >
                   {link.label}
@@ -131,6 +132,7 @@ export function SiteHeader({
           </ul>
         </nav>
       ) : null}
+      </div>
     </div>
   );
 }

@@ -40,16 +40,5 @@ export const bsciAr: readonly ServiceSection[] = [
         text: "انضم إلى مجموعات دراسة ومنتديات للتفاعل والدعم بين الزملاء.",
       },
     ],
-    secondary: {
-      heading: "لماذا نحن؟",
-      image: "/images/why-choose-us.webp",
-      imageAlt: "فريق يتلقى إرشادات الاستشارات النوعية",
-      bullets: [
-        { kind: "item", title: "إرشاد الخبراء:", text: "تعلّم من مهنيين ممارسين بخبرة عميقة." },
-        { kind: "item", title: "منهج مصمم لك:", text: "خطط دراسة مصاغة من أجل نجاحك." },
-        { kind: "item", title: "موارد شاملة:", text: "مواد عالية الجودة واختبارات تدريبية." },
-        { kind: "item", title: "مجتمع داعم:", text: "تفاعل مع مجتمع تعلم حيوي." },
-      ],
-    },
   },
 ] satisfies readonly ServiceSection[];

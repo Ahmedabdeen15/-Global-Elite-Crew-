@@ -86,7 +86,7 @@ export default async function ServicesPage({
       </nav>
 
       {/* ── One section per certification service ──────────────────────── */}
-      <div className="mt-12 space-y-20 pb-16">
+      <div className="mt-12 space-y-20 pb-16 px-6 md:px-20">
         {services.map((service, index) => {
           const imageFirst = index % 2 === 0;
 
@@ -161,6 +161,57 @@ export default async function ServicesPage({
           );
         })}
       </div>
+
+      {/* Static "Why Choose Us?" section */}
+      <section className="mt-20 mb-16 px-6 md:px-10">
+        <div className="mx-auto max-w-6xl rounded-3xl bg-brand-50/70 p-8 md:p-10 lg:grid lg:grid-cols-2 lg:items-center lg:gap-10">
+          <div>
+            <h2 className="mb-5 font-display text-2xl font-bold text-brand-700">
+              {locale === "en" ? "Why Choose Us?" : "لماذا نحن؟"}
+            </h2>
+            <BulletList
+              bullets={locale === "en" ?
+                [
+                  {
+                    kind: "item",
+                    title: "Expert Guidance:",
+                    text: "Learn from seasoned professionals.",
+                  },
+                  {
+                    kind: "item",
+                    title: "Tailored Approach:",
+                    text: "Study plans designed for your success.",
+                  },
+                  {
+                    kind: "item",
+                    title: "Comprehensive Resources:",
+                    text: "High-quality materials and practice tests.",
+                  },
+                  {
+                    kind: "item",
+                    title: "Supportive Community:",
+                    text: "Engage with a vibrant learning community.",
+                  },
+                ]
+              : [
+                  { kind: "item", title: "إرشاد الخبراء:", text: "تعلّم من مهنيين ممارسين بخبرة عميقة." },
+                  { kind: "item", title: "منهج مصمم لك:", text: "خطط دراسة مصاغة من أجل نجاحك." },
+                  { kind: "item", title: "موارد شاملة:", text: "مواد عالية الجودة واختبارات تدريبية." },
+                  { kind: "item", title: "مجتمع داعم:", text: "تفاعل مع مجتمع تعلم حيوي." },
+                ]
+              }
+            />
+          </div>
+          <Image
+            src="/images/why-choose-us.webp"
+            alt={locale === "en" ? "Team receiving quality consulting guidance" : "فريق يتلقى إرشادات الاستشارات النوعية"}
+            width={480}
+            height={340}
+            loading="lazy"
+            className="mx-auto hidden h-auto w-full max-w-sm rounded-2xl object-cover shadow lg:block"
+          />
+        </div>
+      </section>
 
       {/* Structured data */}
       <JsonLd

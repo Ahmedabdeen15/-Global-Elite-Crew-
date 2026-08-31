@@ -41,32 +41,5 @@ export const bsci: readonly ServiceSection[] = [
         text: "Join study groups and forums for peer interaction and support.",
       },
     ],
-    secondary: {
-      heading: "Why Choose Us?",
-      image: "/images/why-choose-us.webp",
-      imageAlt: "Team receiving quality consulting guidance",
-      bullets: [
-        {
-          kind: "item",
-          title: "Expert Guidance:",
-          text: "Learn from seasoned professionals.",
-        },
-        {
-          kind: "item",
-          title: "Tailored Approach:",
-          text: "Study plans designed for your success.",
-        },
-        {
-          kind: "item",
-          title: "Comprehensive Resources:",
-          text: "High-quality materials and practice tests.",
-        },
-        {
-          kind: "item",
-          title: "Supportive Community:",
-          text: "Engage with a vibrant learning community.",
-        },
-      ],
-    },
   },
 ] satisfies readonly ServiceSection[];

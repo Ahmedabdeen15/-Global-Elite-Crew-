@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   // Required anchor for every canonical/OG URL built across locales.
   metadataBase: new URL(site.url),
   icons: {
-    icon: [{ url: "/images/logo.png", type: "image/png" }],
-    apple: "/apple-icon.png",
+    icon: [{ url: "/images/mini-logo.png", type: "image/png" }],
+    apple: "/images/mini-logo.png",
   },
 };
 
@@ -70,7 +70,7 @@ export default async function LocaleLayout({
         {/* Keyboard users land here first */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-accent-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-white"
+          className="sr-only focus:not-sr-only focus:absolute focus:inset-s-4 focus:top-4 focus:z-70 focus:rounded-full focus:bg-accent-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-white"
         >
           {dict.common.skipToContent}
         </a>
