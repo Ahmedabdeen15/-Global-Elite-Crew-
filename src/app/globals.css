@@ -76,6 +76,18 @@ html {
   font-size: 100%;
 }
 
+@media (min-width: 1920px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 125%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
