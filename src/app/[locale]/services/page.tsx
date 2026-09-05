@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { FaCircleCheck, FaListCheck } from "react-icons/fa6";
+import { FaBars, FaChevronDown, FaCircleCheck, FaListCheck } from "react-icons/fa6";
 
 import { getDictionary } from "@/i18n";
 import { isLocale } from "@/i18n/config";
@@ -71,7 +71,28 @@ export default async function ServicesPage({
         aria-label={dict.common.nav.links[2]?.label ?? "Services"}
         className="mx-auto max-w-6xl px-5 pt-10 md:px-8"
       >
-        <ul className="flex flex-wrap justify-center gap-2.5">
+        <details className="group md:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between rounded-xl border-2 border-brand-200 bg-white px-4 py-3 text-sm font-semibold text-brand-700 shadow-sm transition hover:border-brand-400 hover:bg-brand-50 [&::-webkit-details-marker]:hidden">
+            <span className="flex items-center gap-2">
+              <FaBars aria-hidden className="h-4 w-4 text-accent-500" />
+              {dict.common.nav.links[2]?.label ?? "Services"}
+            </span>
+            <FaChevronDown aria-hidden className="h-3.5 w-3.5 transition-transform group-open:rotate-180" />
+          </summary>
+          <ul className="mt-3 space-y-2 rounded-xl border border-brand-100 bg-white p-3 shadow-sm">
+            {services.map((service) => (
+              <li key={service.id}>
+                <a
+                  href={`#${service.id}`}
+                  className="block rounded-lg px-3 py-2 text-sm font-semibold text-brand-700 transition hover:bg-brand-50"
+                >
+                  {service.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
+        <ul className="hidden flex-wrap justify-center gap-2.5 md:flex">
           {services.map((service) => (
             <li key={service.id}>
               <a
@@ -86,7 +107,7 @@ export default async function ServicesPage({
       </nav>
 
       {/* ── One section per certification service ──────────────────────── */}
-      <div className="mt-12 space-y-20 pb-16 px-6 md:px-20">
+      <div className="mt-12 space-y-20 pb-16 px-6 md:px-20 xl:px-50">
         {services.map((service, index) => {
           const imageFirst = index % 2 === 0;
 
