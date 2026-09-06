@@ -24,6 +24,8 @@ export const contact = {
     phones: ["+2 03 4253255", "+2 01143711439"],
     emailLabel: "البريد الإلكتروني",
     emailValue: "ghada_esmat@globalelitecrew.com",
+    whatsappLabel: "واتساب",
+    whatsappValue: "+201143711439",
   },
 
   map: {

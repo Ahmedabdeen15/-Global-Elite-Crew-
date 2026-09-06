@@ -84,7 +84,7 @@ export function ContactForm({ copy }: ContactFormProps) {
         aria-hidden="true"
       />
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-5 2xl:grid-cols-2">
         <Field name="first_name" label={copy.firstName.label} placeholder={copy.firstName.placeholder} required minLength={3} maxLength={80} />
         <Field name="last_name" label={copy.lastName.label} placeholder={copy.lastName.placeholder} required maxLength={80} />
         <Field type="email" name="email" label={copy.email.label} placeholder={copy.email.placeholder} required inputMode="email" />

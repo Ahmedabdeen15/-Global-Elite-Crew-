@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
+import { FaEnvelope, FaLocationDot, FaPhone, FaWhatsapp } from "react-icons/fa6";
 
 import { getDictionary } from "@/i18n";
 import { isLocale, sitePaths } from "@/i18n/config";
@@ -76,6 +76,12 @@ export default async function ContactPage({
                 value={t.infoPanel.emailValue}
                 href={`mailto:${t.infoPanel.emailValue}`}
               />
+              <InfoRow
+                icon={<FaWhatsapp aria-hidden className="h-7 w-7 text-brand-500" />}
+                label={t.infoPanel.whatsappLabel}
+                value={t.infoPanel.whatsappValue}
+                href={`https://wa.me/${t.infoPanel.whatsappValue}`}
+              />
             </ul>
           </aside>
         </div>
@@ -116,11 +122,11 @@ function InfoRow({
         {icon}
       </span>
       <span>
-        <span className="block font-bold uppercase tracking-wide text-accent-600 [font-size:0.8rem]">
+        <span className="block font-bold uppercase tracking-wide text-accent-600 text-[0.8rem]">
           {label}
         </span>
         {href ? (
-          <a href={href} dir="ltr" className="font-medium text-ink-800 underline-offset-4 hover:text-brand-700 hover:underline rtl:inline-block rtl:w-full">
+          <a href={href} dir="ltr" className="font-medium text-ink-800 underline-offset-4 hover:text-brand-700 hover:underline rtl:inline-block rtl:w-full" target="_blank" rel="noopener noreferrer">
             {value}
           </a>
         ) : (

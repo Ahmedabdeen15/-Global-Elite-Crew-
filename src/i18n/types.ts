@@ -33,6 +33,7 @@ export interface FooterCopy {
   socialAriaLabel: string;
   facebookAria: string;
   linkedinAria: string;
+  whatsappAria: string;
   xAria: string;
 }
 
@@ -157,6 +158,8 @@ export interface ContactDictionary {
     phones: readonly string[];
     emailLabel: string;
     emailValue: string;
+    whatsappLabel: string;
+    whatsappValue: string;
   };
   map: { iframeTitle: string; popupText: string };
 }

@@ -4,6 +4,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaXTwitter,
+  FaWhatsapp
 } from "react-icons/fa6";
 import type { FooterCopy } from "@/i18n/types";
 import type { Locale } from "@/i18n/config";
@@ -106,6 +107,15 @@ export function SiteFooter({ locale, copy, relatedLinks }: SiteFooterProps) {
               className="transition-colors hover:text-brand-400"
             >
               <FaFacebookF aria-hidden className="h-6 w-6" />
+            </a>
+            <a
+              href="https://wa.me/+201143711439"
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label={copy.whatsappAria}
+              className="transition-colors hover:text-brand-400"
+            >
+              <FaWhatsapp aria-hidden className="h-6 w-6" />
             </a>
             <a
               href="https://www.linkedin.com/company/global-elite-crew/"
