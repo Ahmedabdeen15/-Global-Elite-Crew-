@@ -10,7 +10,7 @@ export const home = {
 
   whoWeAre: {
     eyebrow: "Who We Are?",
-    body: "Global Elite Crew is a quality service provider of expert TQM Consultant services which has been established 3 years ago.",
+    body: "Global Elite Crew is a quality service provider of expert TQM Consultant services which has been established 5 years ago.",
     imageAlt: "Global Elite Crew team presentation",
   },
 

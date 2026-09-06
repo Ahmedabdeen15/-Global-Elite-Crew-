@@ -62,6 +62,7 @@ export const common = {
     socialAriaLabel: "حسابات التواصل الاجتماعي",
     facebookAria: "فيسبوك",
     linkedinAria: "لينكدإن",
+    whatsappAria: "واتساب",
     xAria: "إكس (تويتر)",
   },
 } as const;

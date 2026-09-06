@@ -49,12 +49,13 @@ export default async function HomePage({
       {/* ── Hero ───────────────────────────────────────────────────────── */}
       <section className="bg-linear-to-b from-brand-50 to-white">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 pb-24 pt-20 text-center md:pb-32 md:pt-28">
-          <p className="font-display text-5xl font-black tracking-tight text-accent-500 drop-shadow-sm sm:text-7xl">
-            {t.hero.brandLine1}
-          </p>
-          <p className="font-display text-2xl font-semibold text-brand-600 sm:text-4xl">
-            {t.hero.brandLine2}
-          </p>
+          <Image
+            src="/images/logo.png"
+            alt={`${t.hero.brandLine1} ${t.hero.brandLine2}`}
+            width={250}
+            height={350}
+            className="mx-auto mb-3 h-auto w-100"
+          />
           <p className="mt-4 text-sm font-bold uppercase tracking-[0.45em] text-ink-700 sm:text-base">
             {t.hero.tagline}
           </p>
@@ -88,7 +89,7 @@ export default async function HomePage({
             className="mx-auto h-auto w-full max-w-xl rounded-3xl object-cover"
           />
           <div className="text-center">
-            <p className="mb-4 font-display text-sm font-bold uppercase tracking-[0.35em] text-accent-500">
+            <p className="mb-4 font-display text-xl font-bold uppercase tracking-[0.35em] text-accent-500">
               {t.whoWeAre.eyebrow}
             </p>
             <p className="text-xl leading-relaxed text-ink-700 md:text-2xl">
