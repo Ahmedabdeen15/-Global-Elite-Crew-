@@ -97,7 +97,7 @@ export const home = {
   },
 
   clients: {
-    title: "We worked with",
+    title: "Our Partners in Success",
     seeAllAria: "client website opens in a new tab",
   },
 } as const;

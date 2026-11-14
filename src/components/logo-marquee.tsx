@@ -13,7 +13,10 @@ interface LogoMarqueeProps {
  */
 export function LogoMarquee({ heading, seeAllAria }: LogoMarqueeProps) {
   return (
-    <section aria-labelledby="clients-heading" className="mt-24 overflow-hidden">
+    <section
+      aria-labelledby="clients-heading"
+      className="mt-24 overflow-hidden"
+    >
       <h2
         id="clients-heading"
         className="mx-auto max-w-6xl px-5 text-center font-display text-2xl font-semibold text-ink-800 md:px-8 md:text-start"
@@ -21,10 +24,14 @@ export function LogoMarquee({ heading, seeAllAria }: LogoMarqueeProps) {
         {heading}
       </h2>
 
-      <div className="group relative mt-8 py-4">
+      <div className="group relative mt-8 py-8" dir="ltr">
         <ul className="marquee-track flex w-max items-center gap-12 px-6">
           {[false, true].map((isClone) => (
-            <li className="flex items-center gap-12" key={String(isClone)} aria-hidden={isClone}>
+            <li
+              className="flex items-center gap-12"
+              key={String(isClone)}
+              aria-hidden={isClone}
+            >
               {CLIENT_LOGOS.map((logo) => {
                 const img = (
                   <Image
@@ -33,7 +40,7 @@ export function LogoMarquee({ heading, seeAllAria }: LogoMarqueeProps) {
                     width={140}
                     height={72}
                     loading="lazy"
-                    className="h-14 w-auto object-contain opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 group-hover:[animation-play-state:paused]"
+                    className="h-15 w-auto object-contain opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 group-hover:[animation-play-state:paused]"
                   />
                 );
                 return logo.website ? (

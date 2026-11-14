@@ -10,7 +10,12 @@ import {
 } from "react-icons/fa6";
 
 import { getDictionary } from "@/i18n";
-import { isLocale, localizedPath, sitePaths, localeDirection } from "@/i18n/config";
+import {
+  isLocale,
+  localizedPath,
+  sitePaths,
+  localeDirection,
+} from "@/i18n/config";
 import { Counter } from "@/components/counter";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { Section } from "@/components/section";
@@ -48,7 +53,7 @@ export default async function HomePage({
     <>
       {/* ── Hero ───────────────────────────────────────────────────────── */}
       <section className="bg-linear-to-b from-brand-50 to-white">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 pb-24 pt-20 text-center md:pb-32 md:pt-28">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 pb-18 pt-20 text-center md:pb-16 md:pt-20">
           <Image
             src="/images/logo.png"
             alt={`${t.hero.brandLine1} ${t.hero.brandLine2}`}
@@ -75,6 +80,12 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      {/* ── Clients marquee ─────────────────────────────────────────────── */}
+      <LogoMarquee
+        heading={t.clients.title}
+        seeAllAria={t.clients.seeAllAria}
+      />
 
       {/* ── Who we are ──────────────────────────────────────────────────── */}
       <Section className="py-14">
@@ -140,7 +151,10 @@ export default async function HomePage({
                 <ul className="w-full space-y-2 text-start text-ink-600 my-auto">
                   {pillar.items.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <FaCircleCheck aria-hidden className="mt-1 shrink-0 text-brand-400" />
+                      <FaCircleCheck
+                        aria-hidden
+                        className="mt-1 shrink-0 text-brand-400"
+                      />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -160,7 +174,10 @@ export default async function HomePage({
                 key={item}
                 className="flex items-start gap-3 rounded-xl bg-white p-3 leading-snug transition-colors hover:bg-brand-50"
               >
-                <FaCircleCheck aria-hidden className="mt-0.5 shrink-0 text-brand-500" />
+                <FaCircleCheck
+                  aria-hidden
+                  className="mt-0.5 shrink-0 text-brand-500"
+                />
                 <span>{item}</span>
               </li>
             ))}
@@ -194,7 +211,10 @@ export default async function HomePage({
             <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
               {t.certificates.items.map((item) => (
                 <li key={item} className="flex items-center gap-3">
-                  <FaCertificate aria-hidden className="shrink-0 text-accent-500" />
+                  <FaCertificate
+                    aria-hidden
+                    className="shrink-0 text-accent-500"
+                  />
                   <span className="font-medium">{item}</span>
                 </li>
               ))}
@@ -202,9 +222,6 @@ export default async function HomePage({
           </div>
         </div>
       </Section>
-
-      {/* ── Clients marquee ─────────────────────────────────────────────── */}
-      <LogoMarquee heading={t.clients.title} seeAllAria={t.clients.seeAllAria} />
 
       {/* Structured data */}
       <JsonLd data={breadcrumbSchema(locale, [])} />
