@@ -41,6 +41,7 @@ export function LogoMarquee({ heading, seeAllAria }: LogoMarqueeProps) {
                     height={72}
                     loading="lazy"
                     className="h-15 w-auto object-contain opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 group-hover:[animation-play-state:paused]"
+                    style={{ width: "auto" }}
                   />
                 );
                 return logo.website ? (

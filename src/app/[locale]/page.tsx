@@ -59,6 +59,7 @@ export default async function HomePage({
             alt={`${t.hero.brandLine1} ${t.hero.brandLine2}`}
             width={250}
             height={350}
+            loading="eager"
             className="mx-auto mb-3 h-auto w-100"
           />
           <p className="mt-4 text-sm font-bold uppercase tracking-[0.45em] text-ink-700 sm:text-base">
