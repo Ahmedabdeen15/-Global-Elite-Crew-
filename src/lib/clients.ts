@@ -15,7 +15,7 @@ export const CLIENT_LOGOS: readonly ClientLogo[] = [
   { image: "/images/logos/Egyptian-French-Porcelain-Factory.jpg", name: "Egyptian French Porcelain Factory" },
   { image: "/images/logos/first.jpg", name: "first Egypt (F.S.E.G)" },
   { image: "/images/logos/el-shorouk-for-electromechanical-business.jpg", name: "el shorouk for electromechanical business" },
-  { image: "/images/logos/denis-textile-egypt.jpg", name: "Denis Textile Egypt" },
+  { image: "/images/logos/denis-textile.jpg", name: "Denis Textile Egypt" },
   { image: "/images/logos/Indigo-Textile-Egypt.jpg", name: "Indigo Textile Egypt" },
   {image: "/images/logos/green-house.jpg", name: "Green House" },
   { image: "/images/logos/ALMAAMONEY.jpg", name: "ALMAAMONEY S.A.E. For Export and Import" },
